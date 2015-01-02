@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>Vue.js incremental search demo</title>
+</head>
+<body>
+  <div id="app">
+    <input type="search" placeholder="Search" v-model="searchText">
+    <ul>
+      <li v-repeat="people | filterBy searchText">{{firstName}} {{lastName}}
+    </ul>
+  </div>
+  <script src="../js/lib/vue.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

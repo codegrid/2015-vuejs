@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "browser-sync": "^1.7.3",
+    "coffee-script": "^1.8.0",
+    "gulp": "^3.8.10"
+  }
+}
