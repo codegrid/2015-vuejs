@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Vue.js change data demo</title>
+  <style>
+  [v-cloak] { display: none;}
+  </style>
+</head>
+<body>
+  <div id="app" v-cloak>
+    <p>{{name}}</p>
+    <button v-on="click: changeName">change</button>
+  </div>
+  <script src="../../js/lib/vue.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
