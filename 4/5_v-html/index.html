@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <style>
+    [v-cloak] { display: none; }
+  </style>
+</head>
+<body>
+  <div id="app" v-cloak>
+    <textarea v-model="textarea"></textarea>
+    <div v-html="textarea"></div>
+  </div>
+  <script src="/js/lib/vue.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
