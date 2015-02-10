@@ -3,12 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Vue.js incremental search demo</title>
+  <title>Vue.js v-partial demo</title>
+  <style>
+    [v-cloak] { display: none; }
+  </style>
 </head>
 <body>
-  <div id="app">
-  </div>
+  <div id="app" v-cloak>
+  </div>  
   <script src="../../js/lib/vue.js"></script>
   <script src="app.js"></script>
-  </body>
+</body>
 </html>

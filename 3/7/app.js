@@ -10,6 +10,6 @@ var vm = new Vue({
   template: 
     '<div v-repeat="colors">' +
       '<p>{{name}}</p>' +
-      '<span v-repeat="color: colorCode">{{color}} </span>'+
+      '<span v-repeat="color: colorCode">{{$parent.name}}: {{color}} </span>'+
     '</div>'
 });
