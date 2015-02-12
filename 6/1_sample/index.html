@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div id="app" v-cloak>
+    <section class="editor">
+      <h3>エディタ</h3>
+      <input v-on="keyup:countText" v-model="inputText">
+      <button v-on="click: addMemo" v-attr="disabled: countOver || !inputText">追加</button>
+      <p v-class="over: countOver">
+        {{maxInputCount - inputCount}}
+      </p>
+    </section>
+    <section class="memo">
+      <h3>メモ</h3>
+      <ul>
+        <li v-repeat="memos">
+          {{content}}<button v-on="click: removeMemo">削除</button>
+        </li>
+      </ul>
+    </section>
+  </div>
+  <script src="/js/lib/vue.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

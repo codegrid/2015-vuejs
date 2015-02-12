@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div id="app" v-cloak>
+    <section v-component="app-editor" v-with="memos: memos"></section>
+    <section v-component="app-memo"></section>
+  </div>
+  <script src="/js/lib/vue.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
