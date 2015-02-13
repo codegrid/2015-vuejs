@@ -1,6 +1,5 @@
 Vue.component('app-editor', {
   replace: true,
-  inherit: false,
   data: function() {
     return {
       inputText: '',
@@ -30,4 +29,22 @@ Vue.component('app-editor', {
       '{{maxInputCount - inputCount}}' +
     '</p>' +
   '</section>'
+});
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    memos: [
+      { content: "公共料金払う" },
+      { content: "来週打ち合わせあり" }
+    ]
+  },
+  methods: {
+    removeMemo: function(e) {
+      var memo = e.targetVM;
+      if(window.confirm(memo.content + ' を削除しますか？')) {
+        this.memos.splice(memo.$index, 1);
+      }
+    }
+  }
 });

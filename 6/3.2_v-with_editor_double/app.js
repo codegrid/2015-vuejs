@@ -1,12 +1,12 @@
 Vue.component('app-editor', {
   replace: true,
-  inherit: false,
   data: function() {
     return {
       inputText: '',
       inputCount: 0,
       maxInputCount: 20,
-      countOver: false
+      countOver: false,
+      memos: []
     }
   },
   methods: {
@@ -32,9 +32,18 @@ Vue.component('app-editor', {
   '</section>'
 });
 
-Vue.component('app-memolist', {
-  replace: true,
-  inherit: false,
+var app = new Vue({
+  el: '#app',
+  data: {
+    memos1: [
+      { content: "公共料金払う" },
+      { content: "来週打ち合わせあり" }
+    ],
+    memos2: [
+      { content: "公共料金払う" },
+      { content: "来週打ち合わせあり" }
+    ]
+  },
   methods: {
     removeMemo: function(e) {
       var memo = e.targetVM;
@@ -42,24 +51,5 @@ Vue.component('app-memolist', {
         this.memos.splice(memo.$index, 1);
       }
     }
-  },
-  template:
-  '<section class="memo">' +
-    '<h3>メモリスト</h3>' +
-    '<ul>' +
-      '<li v-repeat="memos">' +
-        '{{content}}<button v-on="click: removeMemo">削除</button>' +
-      '</li>' +
-    '</ul>' +
-  '</section>'
-});
-
-var vm = new Vue({
-  el: '#app',
-  data: {
-    memos: [
-      { content: "公共料金払う" },
-      { content: "来週打ち合わせあり" }
-    ]
   }
 });

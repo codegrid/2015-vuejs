@@ -1,6 +1,13 @@
 Vue.component('app-editor', {
   replace: true,
-  inherit: true,
+  data: function() {
+    return {
+      inputText: '',
+      inputCount: 0,
+      maxInputCount: 20,
+      countOver: false
+    }
+  },
   methods: {
     addMemo: function() {
       var newMemo = { content: this.inputText };
@@ -26,7 +33,6 @@ Vue.component('app-editor', {
 
 Vue.component('app-memolist', {
   replace: true,
-  inherit: true,
   methods: {
     removeMemo: function(e) {
       var memo = e.targetVM;
@@ -46,16 +52,12 @@ Vue.component('app-memolist', {
   '</section>'
 });
 
-var vm = new Vue({
+var app = new Vue({
   el: '#app',
   data: {
     memos: [
       { content: "公共料金払う" },
       { content: "来週打ち合わせあり" }
-    ],
-    inputText: '',
-    inputCount: 0,
-    maxInputCount: 20,
-    countOver: false
+    ]
   }
 });

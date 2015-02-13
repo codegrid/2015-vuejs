@@ -19,7 +19,7 @@ button {
   box-shadow: rgba(255,255,255,0.4) 0 1px 0 inset;
   border-radius: 3px;
 }
-h3 {
+h3, h4 {
   color: #fff;
   margin: 0 0 10px;
   padding: 3px;
@@ -27,6 +27,11 @@ h3 {
   color: #1a814f;
   border-radius: 2px;
   border-bottom: 1px dashed;
+}
+h4 {
+  font-size: 14px;
+  border: none;
+  margin: 10px 0 0;
 }
 
 [v-cloak] { display: none; }
