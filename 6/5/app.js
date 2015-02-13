@@ -1,6 +1,3 @@
-Vue.component('app-editor', Editor);
-Vue.component('app-memo', Memo);
-
 var vm = new Vue({
   data: {
     memos: [
@@ -10,7 +7,7 @@ var vm = new Vue({
   },
   template:
   '<app-editor v-with="memos: memos"></app-editor>' +
-  '<app-memo v-with="memos: memos"></app-memo>'
+  '<app-memolist v-with="memos: memos"></app-memolist>'
 });
 vm.$mount();
 vm.$appendTo('body');

@@ -1,4 +1,4 @@
-var Memo = Vue.extend({
+Vue.component('app-memolist', {
   replace: true,
   inherit: false,
   methods: {
@@ -11,7 +11,7 @@ var Memo = Vue.extend({
   },
   template:
   '<section class="memo">' +
-    '<h3>メモ</h3>' +
+    '<h3>メモリスト</h3>' +
     '<ul>' +
       '<li v-repeat="memos">' +
         '{{content}}<button v-on="click: removeMemo">削除</button>' +

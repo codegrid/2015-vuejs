@@ -1,11 +1,11 @@
-var Editor = Vue.extend({
+Vue.component('app-editor', {
   replace: true,
   inherit: false,
   data: function() {
     return {
       inputText: '',
       inputCount: 0,
-      maxInputCount: 15,
+      maxInputCount: 20,
       countOver: false
     }
   },

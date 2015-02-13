@@ -1,4 +1,4 @@
-var Editor = Vue.extend({
+Vue.component('app-editor', {
   replace: true,
   inherit: true,
   methods: {
@@ -23,7 +23,6 @@ var Editor = Vue.extend({
     '</p>' +
   '</section>'
 });
-Vue.component('app-editor', Editor);
 
 var vm = new Vue({
   el: '#app',

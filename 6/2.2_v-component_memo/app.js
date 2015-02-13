@@ -1,4 +1,4 @@
-var Editor = Vue.extend({
+Vue.component('app-editor', {
   replace: true,
   inherit: true,
   methods: {
@@ -23,9 +23,8 @@ var Editor = Vue.extend({
     '</p>' +
   '</section>'
 });
-Vue.component('app-editor', Editor);
 
-var Memo = Vue.extend({
+Vue.component('app-memolist', {
   replace: true,
   inherit: true,
   methods: {
@@ -38,7 +37,7 @@ var Memo = Vue.extend({
   },
   template:
   '<section class="memo">' +
-    '<h3>メモ</h3>' +
+    '<h3>メモリスト</h3>' +
     '<ul>' +
       '<li v-repeat="memos">' +
         '{{content}}<button v-on="click: removeMemo">削除</button>' +
@@ -46,7 +45,6 @@ var Memo = Vue.extend({
     '</ul>' +
   '</section>'
 });
-Vue.component('app-memo', Memo);
 
 var vm = new Vue({
   el: '#app',
