@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  font-family: "Hiragino Maru Gothic Pro", "HG丸ゴシックM-PRO", "メイリオ", Meiryo, verdana, arial, sans-serif;
+}
+div {
+  box-sizing: border-box;
+  max-width: 400px;
+  padding: 10px;
+  border-radius: 3px;
+  color: #fff;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+p {
+  font-size: 13px;
+  margin: 0 0 5px;
+  border-bottom: 1px dashed rgba(0,0,0,.2);
+  padding-bottom: 3px;
+}
+/* parent */
+body > div {
+  background-color: #FFBF00;
+  border: 1px solid rgba(0,0,0,.2);
+}
+/* child */
+body > div > div {
+  background-color: #009250;
+  box-shadow: inset 3px 3px 1px rgba(0, 0, 0, .2)
+             ,inset -2px -2px 1px rgba(0, 0, 0, .2);
+}
+/* grandchild */
+body > div > div > div {
+  background-color: #C7243A;
+  box-shadow: inset 3px 3px 1px rgba(0, 0, 0, .2)
+             ,inset -2px -2px 1px rgba(0, 0, 0, .2);
+}
+span {
+  display: inline-block;
+  margin-left: 3px;
+  padding: 3px;
+  font-size: 12px;
+}
+button {
+  width: 45px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 10px;
+  color: #fff;
+  padding: 0;
+  text-align: center;
+  cursor: pointer;
+  background-color: rgba(255,255,255,.2);
+  background-color: rgba(0,0,0,.1);
+  border: 1px solid rgba(0,0,0,.1);
+  box-shadow: rgba(255,255,255,.2) 0 1px 0 inset;
+  border-radius: 2px;
+  border: 1px solid rgba(0,0,0,.15);
+  outline: none;
+}
+body > div > button {
+  background-color: #FFAC00;
+}
