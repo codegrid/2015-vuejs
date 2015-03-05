@@ -1,6 +1,3 @@
-var demologger = new DemoLogger();
-demologger.set({
-'change delimiters': function() {
 Vue.config.delimiters = ['(%', '%)'];
 
 var vm = new Vue({
@@ -8,6 +5,4 @@ var vm = new Vue({
   data: {
     name: 'nakajmg'
   }
-});
-}
 });
