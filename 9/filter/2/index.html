@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <style>
+    [v-cloak] { display: none; }
+    label {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div id="app" v-cloak>
+    <h4>filterBy input1</h4>
+    <input v-model="input1">
+    <div v-repeat="people | filterBy input1">{{count}} {{name}}</div>
+    
+    <h4>filterBy input2 in count</h4>
+    <input v-model="input2">
+    <div v-repeat="people | filterBy input2 in 'name'">{{count}} {{name}}</div>
+    
+    <h4>filterBy "ka"</h4>
+    <div v-repeat="people | filterBy 'ka'">{{name}}</div>
+    
+    <h4>orderBy</h4>
+    <label>name<input type="radio" v-model="radio" value="name" checked></label>
+    <label>count<input type="radio" v-model="radio" value="count"></label>
+    <label>reverse<input type="checkbox" v-model="reverse"></label>
+    <div v-repeat="people | orderBy radio reverse">{{count}}: {{name}}</div>
+    
+  </div>
+  <script src="../../../js/lib/vue.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
