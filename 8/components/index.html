@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="../style.css">
+  <style>
+    [v-cloak] { display: none; }
+  </style>
 </head>
 <body>
   <div id="app" v-cloak>
-    <section v-component="app-editor"></section>
-    <section v-component="app-memolist" v-with="memos: memos"></section>
   </div>
   <script src="../../js/lib/vue.js"></script>
   <script src="app.js"></script>
