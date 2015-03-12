@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .fade-enter {
+      animation: fade-in 400ms;
+    }
+    .fade-leave {
+      animation: fade-out 400ms;
+    }
+    @keyframes fade-in {
+      0%{ opacity: 0; }
+      100%{ opacity: 1; }
+    }
+    @keyframes fade-out {
+      0%{ opacity: 1; }
+      100%{ opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div id="app" v-cloak>
+    <section v-component="app-editor"></section>
+    <section v-component="app-memolist" v-with="memos: memos"></section>
+  </div>
+  <script src="../../../js/lib/vue.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
