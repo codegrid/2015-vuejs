@@ -15,7 +15,7 @@ var App = Vue.extend({
 
 var App2 = App.extend({
   template:
-  '<button v-on="click: hello">Hehehehe</button>'
+  '<button v-on="click: hello">Hello</button>'
 });
 
 var app = new App2({
