@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  font-family: "Hiragino Maru Gothic Pro", "HG丸ゴシックM-PRO", "メイリオ", Meiryo, verdana, arial, sans-serif;
+}
+button {
+  width: 50px;
+  float: right;
+  height: 33px;
+  line-height: 33px;
+  font-size: 14px;
+  color: #fff;
+  padding: 0;
+  text-align: center;
+  background-color: #EDAD0B;
+  cursor: pointer;
+  background-color: #e9ab20;
+  rgba(255,255,255,0.4) 0 1px 0 inset;
+  border: 1px solid rgba(0,0,0,0.3);
+  box-shadow: rgba(255,255,255,0.4) 0 1px 0 inset;
+  border-radius: 3px;
+}
+h3, h4 {
+  color: #fff;
+  margin: 0 0 10px;
+  padding: 3px;
+  font-size: 16px;
+  color: #1a814f;
+  border-radius: 2px;
+  border-bottom: 1px dashed;
+}
+h4 {
+  font-size: 14px;
+  border: none;
+  margin: 10px 0 0;
+}
+
+[v-cloak] { display: none; }
+.editor, .memo {
+  box-sizing: border-box;
+  max-width: 400px;
+  padding: 5px 8px 8px;
+  margin: 10px auto 0;
+  background-color: #FFFAEF;
+  border: 2px solid #009250;
+  border-radius: 3px;
+}
+.editor {
+  color: #555;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.editor .over {
+  color: #C7243A;
+}
+.editor input {
+  box-sizing: border-box;
+  width: 100%;
+  line-height: 30px;
+  color: #fff;
+  font-size: 16px;
+  background-color: #01A158;
+  border: 5px solid #009250;
+  margin-bottom: 8px;
+  padding: 0 5px;
+  outline: none;
+  border-radius: 2px;
+  -webkit-appearance: none;
+}
+.editor p {
+  float: right;
+  line-height: 32px;
+  margin: 0;
+  margin-right: 10px;
+  font-size: 14px;
+}
+.editor button {
+  width: 80px;
+}
+.editor button[disabled] {
+  opacity: 0.5;
+}
+.memo ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.memo li {
+  box-sizing: border-box;
+  height: 42px;
+  line-height: 32px;
+  padding: 5px;
+  padding-left: 10px;
+  margin-bottom: 3px;
+  overflow: hidden;
+  background-color: #009250;
+  color: #fff;
+  word-break: break-all;
+  font-size: 13px;
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
