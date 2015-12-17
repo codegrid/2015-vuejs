@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+<body>
+<div id="app">
+  <select v-model="selectedColor">
+    <option v-for="color in colors" :value="color.value" v-text="color.text"></option>
+  </select>
+  <div>selectedColor = {{selectedColor}}</div>
+</div>
+<script src="../vue.min.js"></script>
+<script>
+  var vm = new Vue({
+    el: "#app",
+    data: {
+      selectedColor: "red",
+      colors: [
+        {value: 'red', text: '赤'},
+        {value: 'blue', text: '青'},
+        {value: 'yellow', text: '黄'}
+      ]        
+    }
+  })
+</script>
+</body>
+</html>
