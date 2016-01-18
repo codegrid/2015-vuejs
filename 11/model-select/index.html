@@ -6,7 +6,7 @@
 <body>
 <div id="app">
   <select v-model="selectedColor">
-    <option v-for="color in colors" :value="color.value" v-text="color.text"></option>
+    <option v-for="color in colors" :value="color.value">{{color.text}}</option>
   </select>
   <div>selectedColor = {{selectedColor}}</div>
 </div>
@@ -20,7 +20,7 @@
         {value: 'red', text: '赤'},
         {value: 'blue', text: '青'},
         {value: 'yellow', text: '黄'}
-      ]        
+      ]
     }
   })
 </script>
