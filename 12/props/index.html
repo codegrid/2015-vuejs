@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+<body>
+<div id="app">
+  <my-component :prop1="name" :prop2="age" prop3="test"></my-component>
+</div>
+<script src="../vue.min.js"></script>
+<script>
+  Vue.component("my-component", {
+    props: ['prop1', 'prop2', 'prop3'],
+    template:
+      '<div>' +
+        '<h1>my-component</h1>' +
+        '{{prop1}}, {{prop2}}, {{prop3}}' +
+      '</div>'
+  })
+  var vm = new Vue({
+    el: "#app",
+    data: {
+      name: 'nakajmg',
+      age: 30,
+      test: "prop3"
+    }
+  });
+</script>
+</body>
+</html>
